@@ -9,7 +9,7 @@
   const green = $('img.green');
   const crystals = [gold, blue, purple, green];
   let score = 0;
-  const scoreDisplay = $('span#score');
+  const scoreDisplay = $('h3#score');
   const message = $('h3.message');
 
   const game = {

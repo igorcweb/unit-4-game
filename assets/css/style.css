@@ -12,6 +12,7 @@ h3 {
   font-size: normal;
   margin: 0;
 }
+
 h1 {
   display: inline-block;
   margin: 20px;
@@ -19,28 +20,21 @@ h1 {
   background-color: rgb(179, 119, 8);
   padding: 20px 30px;
   font-weight: 400;
-}
-
-div.wrapper {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-}
-
-div.game {
-  margin: 20px 0;
+  margin-bottom: 90px;
 }
 
 div.description {
+  float: right;
   margin: 20px;
   padding: 10px 30px;
   color: rgb(6, 161, 164);
   background-color: ivory;
-  max-width: 500px;
+  max-width: 550px;
   font-size: 1.1rem;
 }
 
 div.number {
+  float: left;
   height: 96px;
   padding: 10px;
   width: 300px;
@@ -48,7 +42,7 @@ div.number {
   color: rgb(70, 4, 70);
   font-size: 2rem;
   float: left;
-  margin: 10px;
+  margin: 20px;
   margin-top: 0;
 }
 
@@ -68,6 +62,7 @@ h3.status {
 
 div.crystals {
   clear: both;
+  position: relative;
 }
 div.crystal-bg {
   position: relative;
@@ -97,21 +92,22 @@ div.score {
 }
 
 h3.score-heading,
-span#score {
+h3#score {
   color: #f3f3f3;
-  margin: 20px;
+  margin: 10px 20px;
   background-color: teal;
   padding: 20px;
 }
 
 h3.score-heading {
   width: 300px;
-  margin-bottom: 30px;
   display: inline-block;
 }
 
-span#score {
+h3#score {
+  font-weight: 400;
   font-size: 2rem;
-  padding-bottom: 50px;
-  padding-right: 290px;
+  padding-top: 10px;
+  padding-left: 10px;
+  width: 310px;
 }
