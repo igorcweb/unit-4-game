@@ -69,7 +69,7 @@ div.crystal-bg {
   float: left;
   width: 120px;
   height: 120px;
-  background-color: rgba(255, 255, 255, 0.913);
+  background-color: rgba(255, 255, 255, 0.817);
   margin: 0 20px;
   margin-bottom: 10px;
 }
@@ -97,6 +97,7 @@ div.score {
 
 h3.score-heading,
 h3#score {
+  font-weight: 400;
   color: #f3f3f3;
   margin: 10px 20px;
   background-color: teal;
@@ -104,7 +105,8 @@ h3#score {
 }
 
 h3.score-heading {
-  width: 300px;
+  font-size: 1.4rem;
+  width: 280px;
   display: inline-block;
 }
 
@@ -113,5 +115,6 @@ h3#score {
   font-size: 2rem;
   padding-top: 10px;
   padding-left: 10px;
-  width: 310px;
+  padding-bottom: 50px;
+  width: 290px;
 }
