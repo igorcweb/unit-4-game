@@ -1,6 +1,6 @@
 (function() {
   let number;
-  let numberDisplay = $('span#number');
+  const numberDisplay = $('span#number');
   let wins = 0;
   let losses = 0;
   const gold = $('img.gold');
@@ -34,12 +34,13 @@
             wins++;
             $('#wins').text(wins);
             game.reset();
-          }
-          if (score > number) {
+          } else if (score > number) {
             message.text('You Lose!');
             losses++;
             $('#losses').text(losses);
             game.reset();
+          } else {
+            message.text('');
           }
         });
       });
