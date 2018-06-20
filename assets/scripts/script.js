@@ -5,11 +5,12 @@
   const game = {
     init: function() {
       const numberDisplay = $('span#number');
-      const gold = $('img.gold');
-      const blue = $('img.blue');
-      const purple = $('img.purple');
-      const green = $('img.green');
-      const crystals = [gold, blue, purple, green];
+      const crystals = [
+        $('img.gold'),
+        $('img.blue'),
+        $('img.purple'),
+        $('img.green')
+      ];
       score = 0;
       scoreDisplay.text(score);
       number = Math.floor(Math.random() * 120) + 19;
@@ -43,7 +44,6 @@
       });
     }
   };
-
   game.init();
   game.play();
 })();
