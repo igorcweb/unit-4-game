@@ -13,10 +13,10 @@
       ];
       score = 0;
       scoreDisplay.text(score);
-      number = Math.floor(Math.random() * 120) + 19;
+      number = Math.floor(Math.random() * 102) + 19;
       numberDisplay.text(number);
       $.each(crystals, function(index, crystal) {
-        crystal.attr('data-value', Math.floor(Math.random() * 12) + 1);
+        crystal.attr('data-value', Math.floor(Math.random() * 11) + 1);
       });
     },
     play: function() {
