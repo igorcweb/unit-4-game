@@ -1,19 +1,15 @@
 (function() {
   let number;
-  const numberDisplay = $('span#number');
-  let wins = 0;
-  let losses = 0;
-  const gold = $('img.gold');
-  const blue = $('img.blue');
-  const purple = $('img.purple');
-  const green = $('img.green');
-  const crystals = [gold, blue, purple, green];
   let score = 0;
   const scoreDisplay = $('h3#score');
-  const message = $('h3#message');
-  const crystalsDiv = $('div.crystals');
   const game = {
     init: function() {
+      const numberDisplay = $('span#number');
+      const gold = $('img.gold');
+      const blue = $('img.blue');
+      const purple = $('img.purple');
+      const green = $('img.green');
+      const crystals = [gold, blue, purple, green];
       score = 0;
       scoreDisplay.text(score);
       number = Math.floor(Math.random() * 120) + 19;
@@ -23,6 +19,10 @@
       });
     },
     play: function() {
+      let wins = 0;
+      let losses = 0;
+      const crystalsDiv = $('div.crystals');
+      const message = $('h3#message');
       crystalsDiv.on('click', '.crystal', function() {
         const value = parseInt(this.dataset.value);
         score += value;
