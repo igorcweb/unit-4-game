@@ -11,42 +11,39 @@
   let score = 0;
   const scoreDisplay = $('h3#score');
   const message = $('h3.message');
-
+  const crystalsDiv = $('div.crystals');
   const game = {
-    reset: function reset() {
+    init: function() {
       score = 0;
       scoreDisplay.text(score);
       number = Math.floor(Math.random() * 120) + 19;
       numberDisplay.text(number);
       $.each(crystals, function(index, crystal) {
-        crystal.value = Math.floor(Math.random() * 12) + 1;
+        crystal.attr('data-value', Math.floor(Math.random() * 12) + 1);
       });
     },
     play: function() {
-      $.each(crystals, function(index, crystal) {
-        crystal.on('click', function() {
-          const value = $(crystal.value)[0];
-          score += value;
-          console.log(value);
-          scoreDisplay.text(score);
-          if (score === number) {
-            message.text('You Win!');
-            wins++;
-            $('#wins').text(wins);
-            game.reset();
-          } else if (score > number) {
-            message.text('You Lose!');
-            losses++;
-            $('#losses').text(losses);
-            game.reset();
-          } else {
-            message.text('');
-          }
-        });
+      crystalsDiv.on('click', '.crystal', function() {
+        const value = parseInt(this.dataset.value);
+        score += value;
+        scoreDisplay.text(score);
+        if (score === number) {
+          message.text('You Win!');
+          wins++;
+          $('#wins').text(wins);
+          game.init();
+        } else if (score > number) {
+          message.text('You Lose!');
+          losses++;
+          $('#losses').text(losses);
+          game.init();
+        } else {
+          message.text('');
+        }
       });
     }
   };
 
-  game.reset();
+  game.init();
   game.play();
 })();

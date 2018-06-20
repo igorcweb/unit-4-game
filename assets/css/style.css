@@ -47,7 +47,7 @@ div.number {
 }
 
 div.wins-losses {
-  margin: 0 20px;
+  margin-left: 20px;
   margin-bottom: 20px;
   color: #777;
   height: 116px;
