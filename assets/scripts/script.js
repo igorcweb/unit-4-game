@@ -10,7 +10,7 @@
   const crystals = [gold, blue, purple, green];
   let score = 0;
   const scoreDisplay = $('h3#score');
-  const message = $('h3.message');
+  const message = $('h3#message');
   const crystalsDiv = $('div.crystals');
   const game = {
     init: function() {
