@@ -41,8 +41,8 @@ div.number {
   background: rgb(6, 161, 164);
   color: rgb(70, 4, 70);
   font-size: 2rem;
-  float: left;
   margin: 20px;
+  margin-right: 10px;
   margin-top: 0;
 }
 
