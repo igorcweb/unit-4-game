@@ -15,9 +15,20 @@
       scoreDisplay.text(score);
       number = Math.floor(Math.random() * 102) + 19;
       numberDisplay.text(number);
-      $.each(crystals, function(index, crystal) {
-        crystal.attr('data-value', Math.floor(Math.random() * 11) + 1);
-      });
+      const values = [];
+      let uniqueValues = [];
+      function getValue() {
+        while (uniqueValues.length < crystals.length) {
+          let value = Math.floor(Math.random() * 11) + 1;
+          values.push(value);
+          uniqueValues = Array.from(new Set(values));
+        }
+      }
+      getValue();
+      for (let i = 0; i < crystals.length; i++) {
+        crystals[i].attr('data-value', uniqueValues[i]);
+        console.log(crystals[i][0].dataset.value);
+      }
     },
     play: function() {
       let wins = 0;
