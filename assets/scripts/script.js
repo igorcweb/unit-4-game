@@ -17,14 +17,13 @@
       numberDisplay.text(number);
       const values = [];
       let uniqueValues = [];
-      function getValue() {
-        while (uniqueValues.length < crystals.length) {
-          let value = Math.floor(Math.random() * 11) + 1;
-          values.push(value);
-          uniqueValues = Array.from(new Set(values));
-        }
+      //Get 4 unique values
+      while (uniqueValues.length < crystals.length) {
+        let value = Math.floor(Math.random() * 11) + 1;
+        values.push(value);
+        uniqueValues = Array.from(new Set(values));
       }
-      getValue();
+      //Assign value to each crystal
       for (let i = 0; i < crystals.length; i++) {
         crystals[i].attr('data-value', uniqueValues[i]);
         console.log(crystals[i][0].dataset.value);
